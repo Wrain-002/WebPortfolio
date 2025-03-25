@@ -1,41 +1,55 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f7f1e3;
     text-align: center;
+    color: #5c3d2e;
 }
+
 header {
-    background: #333;
+    background: #3e2723;
     color: white;
     padding: 20px;
     font-size: 24px;
+    font-weight: bold;
 }
+s
 .container {
     max-width: 800px;
     margin: 20px auto;
-    background: white;
+    background: #fff8f0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 img {
     max-width: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
+
 .projects {
     margin-top: 20px;
 }
+
 .projects div {
-    background: #ddd;
-    padding: 10px;
+    background: #a67c52;
+    color: white;
+    padding: 15px;
     margin: 10px 0;
     border-radius: 5px;
 }
+
 footer {
     margin-top: 20px;
     padding: 10px;
-    background: #333;
+    background: #3e2723;
     color: white;
+}
+
+h1, h2 {
+    color: #5c3d2e;
 }
