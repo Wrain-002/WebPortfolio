@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -49,6 +48,7 @@ footer {
     background: #3e2723;
     color: white;
 }
+
 
 h1, h2 {
     color: #5c3d2e;
