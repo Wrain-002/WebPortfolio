@@ -21,7 +21,12 @@ body {
     
 }
 
-#header,#about,#projects,#contact,#services, #quiz{
+#header,#about,#projects{
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+}
+#quiz,#contact,#services{
     width: 100%;
     height: auto;
     padding-top: 50px;
@@ -350,8 +355,9 @@ footer {
 }
 
 
-
-/* Responsive */
+.menu-toggle {
+    display: none; /* Hide by default */
+}
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .container {
@@ -371,11 +377,24 @@ footer {
 }
 
 @media (max-width: 768px) {
-    nav {
+    #header,#about,#projects,#quiz,#contact,#services{
         width: 100%;
         height: auto;
+        padding-top: 50px;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
     }
     nav ul {
         width: 100%;
@@ -385,7 +404,23 @@ footer {
         padding: 10px 0;
     }
     nav ul li {
-        margin: 10px 0;
+        margin: 20px 0;
+    }
+    nav ul li a {
+        color: #EAEAEA;
+        font-size: 20px;
+    }
+    .menu-toggle {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+        z-index: 1100;
+        display: block;
     }
     .header-text {
         margin-top: 30px;

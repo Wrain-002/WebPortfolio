@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <button class="menu-toggle">☰</button>
+
     <!-- Home -->
     <div id="header">
         <div class="container">
+            
             <nav>
                 <h2 class="logo">Portfolio</h2>
                 <ul>
@@ -169,6 +171,7 @@
     
     
     <script>
+        // Nav bar
         window.addEventListener("scroll", function () {
         const navbar = document.querySelector("nav");
         if (window.scrollY > 50) {
@@ -176,6 +179,19 @@
         } else {
             navbar.classList.remove("scrolled"); // Remove background when at top
         }
+        });
+        // Mobile menu toggle
+        document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+        menuToggle.addEventListener("click", function () {
+            if (nav.style.left === "0px") {
+                nav.style.left = "-250px";
+            } else {
+                nav.style.left = "0px";
+            }
+        });
         });
 
         // Image gallery functionality
@@ -238,6 +254,8 @@
                 hideModal();
             }
         });
+
+
     </script>
     
 </body>
