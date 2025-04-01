@@ -1,0 +1,74 @@
+*,*:before,*:after { 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    background-color: rgb(33, 32, 32);
+    color: white;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 20rem 20rem;
+    padding: 10px 10%;
+    gap: 50px;
+    padding: 0 20%;
+    margin-top: 3%;
+}
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 50px); 
+    gap: 2px; 
+    justify-content: center; 
+}
+.grid div { 
+    padding: 10px; 
+    border: 2.5px solid #ccc;
+    font-weight: 800;
+}
+.grid .grid-container{
+    justify-content: center;
+    display: flex;
+    
+}
+
+.container h1{
+    text-align: center;
+    justify-content: center;
+}
+
+/* Buttons */
+button { 
+    background-color: gray;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#yes, #no{
+    margin: 10px; 
+    padding: 10px; 
+    width: 80px;
+    height: 40px;
+    font-size: 16px; 
+}
+#yes:hover { 
+    background-color: green; 
+}
+#no:hover { 
+    background-color: red; 
+}
+.play-again{
+    width: 100%;
+    background: transparent;
+    font-size: 30px;
+    padding-top: 15px;
+    font-weight: bolder;
+    color: orange;
+}
+.play-again:hover{
+    text-decoration: underline;
+}
+    
