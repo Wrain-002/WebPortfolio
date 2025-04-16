@@ -564,7 +564,7 @@ footer {
     }
     
 }
-@media (max-width: 340px) {
+@media (max-width: 300px) {
     .logo {
         font-size: 20px;
         width: auto;
