@@ -41,6 +41,17 @@ body {
     color: #AD974F;
 }
 /* Navigation */
+#navOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 900; /* Less than nav (1000), more than other content */
+}
+
 .hide-nav {
     display: none !important;
   }
@@ -497,6 +508,7 @@ footer {
         color: #EAEAEA;
         font-size: 20px;
     }
+    
     .menu-toggle {
         position: fixed;
         top: 15px;
@@ -552,3 +564,58 @@ footer {
     }
     
 }
+@media (max-width: 340px) {
+    .logo {
+        font-size: 20px;
+        width: auto;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .quiz-solo {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #gallery {
+        width: 180px;
+        height: 180px;
+    }
+
+    .post-test button {
+        font-size: 24px;
+        width: 35px;
+        padding: 5px;
+    }
+
+    .modal img {
+        max-height: 80vh;
+        max-width: 95vw;
+    }
+
+    .header-text h1 {
+        font-size: 20px;
+    }
+
+    .header-text p {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    nav {
+        padding-left: 15px;
+    }
+
+    nav .logo {
+        margin-bottom: 15px;
+    }
+}
+

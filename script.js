@@ -10,17 +10,22 @@
         });
         // Mobile menu toggle
         document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const nav = document.querySelector("nav");
-
-        menuToggle.addEventListener("click", function () {
-            if (nav.style.left === "0px") {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const nav = document.querySelector("nav");
+            const overlay = document.getElementById("navOverlay");
+        
+            menuToggle.addEventListener("click", function () {
+                const isOpen = nav.style.left === "0px";
+                nav.style.left = isOpen ? "-250px" : "0px";
+                overlay.style.display = isOpen ? "none" : "block";
+            });
+        
+            overlay.addEventListener("click", function () {
                 nav.style.left = "-250px";
-            } else {
-                nav.style.left = "0px";
-            }
+                overlay.style.display = "none";
+            });
         });
-        });
+        
 
 
 
