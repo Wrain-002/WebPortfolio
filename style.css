@@ -41,6 +41,10 @@ body {
     color: #AD974F;
 }
 /* Navigation */
+.hide-nav {
+    display: none !important;
+  }
+  
 nav{
     display: flex;
     align-items: center;
@@ -94,6 +98,7 @@ nav ul li a:hover::after{
 }
 .header-text h1{
     color: #AD974F;
+    text-align: center;
 }
 .header-text p{
     width: 65%;
@@ -215,6 +220,41 @@ nav ul li a:hover::after{
     box-shadow: 0 0 15px #AD974F;
     transition: 0.3s;
 }
+/* ITEC 106 */
+.pro{
+    text-align: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+.pro h1{
+    color: #AD974F;
+}
+.proj-106{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.proj-106 .sm, .bday{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.proj-106 div img{
+    width: 80%;
+    height: 80%;
+    margin: 20px;
+    margin-bottom: -5px;
+    border-radius: 5px;
+    object-fit: fill;
+    border-radius: 20px;
+    box-shadow: 0 0 15px black;
+}
 
 
 /* Quizzes */
@@ -273,6 +313,9 @@ nav ul li a:hover::after{
     transition: .2s;
 }
 
+.quiz-container h1{
+    color: #AD974F;
+}
 .quiz-solo{
     display: flex;
     align-items: center;
@@ -324,40 +367,47 @@ nav ul li a:hover::after{
     opacity: 0;
 }
 .modal {
-    visibility: hidden;
-    opacity: 0;
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: opacity 0.3s ease-in-out;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
+
+.modal img {
+    max-height: 90vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+  
 
 .modal-content {
     max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-    display: block;
-    margin: auto;
-}
+    max-height: 80%;
+    }
 
 .close {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 35px;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
-    color: white;
     cursor: pointer;
-}
+    }
 
-.close:hover {
-    color: #ccc;
-}
+    .close:hover {
+    color: #bbb;
+    }
 
 
 /* Footer */
@@ -423,13 +473,15 @@ footer {
         left: -250px;
         width: 250px;
         height: 100%;
-        background: rgba(0, 0, 0, 0.9);
+        background: #231F20;
+        border-right: #AD974F 1px solid;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 20px;
         transition: left 0.3s ease;
         z-index: 1000;
+        padding-bottom: 20%;
     }
     nav ul {
         width: 100%;
@@ -468,8 +520,25 @@ footer {
         width: 100%;
     }
     #gallery {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+    }
+    .quiz-solo{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .desc h2 {
+        font-size: 40px;
+    }
+    .desc p {
+        font-size: 18px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
 }
 
@@ -481,15 +550,5 @@ footer {
         font-size: 16px;
         width: 90%;
     }
-    .desc h2 {
-        font-size: 40px;
-    }
-    .desc p {
-        font-size: 18px;
-    }
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+    
 }
