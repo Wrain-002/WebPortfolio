@@ -6,7 +6,7 @@
     <title>Lab</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    
+    <link rel="icon" type="image/x-icon" href="logo.png">
     
 </head>
 <body>
@@ -29,34 +29,70 @@
             
             <div class="quiz-solo">
               <h1>ITEC 101</h1>
-
+              <h2>LAB ACT</h><br><br>
               <div class="test">
-                <h1>LAB ACT</h1>
-                <img src="img/exam.jpg" alt="pt2" class="zoomable">
-                <img src="img/long-quiz.jpg" alt="pt2" class="zoomable">
-                <img src="img/lab1.1.jpg" alt="pt2" class="zoomable">
-                <img src="img/lab1.jpg" alt="pt2" class="zoomable">
-                <img src="img/lab2.jpg" alt="pt2" class="zoomable">
-
+                
+                <img src="img-101/Pic1.jpg" alt="pic1" class="zoomable">
+                <img src="img-101/Pic2.jpg" alt="pic2" class="zoomable">
+                <img src="img-101/Pic3.jpg" alt="pic3" class="zoomable">
+                <img src="img-101/Pic4.jpg" alt="pic4" class="zoomable">
               </div>
-
-              <div class="post_test">
-                <h1>POST-TESTS</h1>
-                <img src="img/pt2.jpg" alt="pt2" class="zoomable">
-                <img src="img/pt3.jpg" alt="pt3" class="zoomable">
-                <img src="img/pt4.jpg" alt="pt4" class="zoomable">
-              </div>
-              <div class="pre-test">
-                <h1>PRE-TESTS</h1>
-                <img src="img/pre2.jpg" alt="pt4" class="zoomable">
-                <img src="img/pre3.jpg" alt="pt4" class="zoomable">
-                <img src="img/pre4.jpg" alt="pt4" class="zoomable">
-                <img src="img/pre5.jpg" alt="pt4" class="zoomable">
-              </div>
+            <a href="IT3A/IT3A.zip" download="lab_act" class="dl">Download here</a>
             </div>
         </div>
     </div>
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img id="modalImg">
+  </div>
 
-    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".zoomable");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+    const nav = document.querySelector("nav");
+
+    let scale = 1;
+
+    images.forEach(image => {
+      image.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+        scale = 1;
+        modalImg.style.transform = `scale(${scale})`;
+        nav.classList.add("hide-nav"); // hide nav
+      });
+    });
+
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+      nav.classList.remove("hide-nav"); // show nav
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        nav.classList.remove("hide-nav"); // show nav
+      }
+    });
+
+    // Zoom in/out on scroll
+    modalImg.addEventListener("wheel", function (e) {
+      e.preventDefault();
+
+      if (e.deltaY < 0) {
+        scale += 0.1;
+      } else {
+        scale = Math.max(1, scale - 0.1);
+      }
+
+      modalImg.style.transform = `scale(${scale})`;
+    });
+  });
+
+      
+  </script>
 </body>
 </html>
