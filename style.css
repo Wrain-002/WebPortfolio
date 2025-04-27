@@ -201,12 +201,13 @@ nav ul li a:hover::after{
 #projects h1{
     text-align: center;
     color: #AD974F;
+    margin-top: 80px;
 }
 .proj{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 .proj div{
     width: 300px;
@@ -217,7 +218,7 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .proj div img{
-    width: 80%;
+    width: 90%;
     height: 80%;
     margin: 10px;
     margin-bottom: -5px;
@@ -508,6 +509,9 @@ footer {
         height: auto;
         padding-top: 50px;
     }
+    #projects h1{
+        margin-top: 0;
+    }
     nav {
         position: fixed;
         top: 0;
@@ -544,7 +548,9 @@ footer {
         position: fixed;
         top: 15px;
         left: 15px;
-        background: none;
+        background: pink;
+        padding: 1% 2% 2%;
+        border-radius: 10%;
         border: none;
         cursor: pointer;
         font-size: 30px;

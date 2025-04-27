@@ -24,36 +24,88 @@
         </nav>
 
 
-    <div class="pro">
-        <h1>ITEC 106</h1>
+        <div class="pro">
+            <h1>ITEC 106</h1>
             <div class="proj-106">
-
-                <h2>SMDC</h2>
-                <div class="sm">
-                    <img src="img-106/sm1.png" alt="Project 1">
-                    <img src="img-106/sm2.png" alt="Project 2">
-                    <img src="img-106/sm3.png" alt="Project 3">
-                    
-                    <img src="img-106/sm4.png" alt="Project 4">
-                    <img src="img-106/sm5.png" alt="Project 5">
-                    
-                </div>
-
-                <h2>Birth Day Guesser</h2>
-                <div class="bday">
-                    <img src="img-106/bday1.png" alt="Project 1.1" style="object-fit: cover; object-position: 50% 50%;">
-                    <img src="img-106/bday2.png" alt="Project 1.2" style="object-fit: cover; object-position: 50% 50%;">
-                    
-                </div>
-
-                
+          
+              <h2>SMDC</h2>
+              <div class="sm">
+                <img class="zoomable" src="img-106/sm1.png" alt="Project 1">
+                <img class="zoomable" src="img-106/sm2.png" alt="Project 2">
+                <img class="zoomable" src="img-106/sm3.png" alt="Project 3">
+                <img class="zoomable" src="img-106/sm4.png" alt="Project 4">
+                <img class="zoomable" src="img-106/sm5.png" alt="Project 5">
+              </div>
+          
+              <h2>Birth Day Guesser</h2>
+              <div class="bday">
+                <img class="zoomable" src="img-106/bday1.png" alt="Project 1.1" style="object-fit: cover; object-position: 50% 50%;">
+                <img class="zoomable" src="img-106/bday2.png" alt="Project 1.2" style="object-fit: cover; object-position: 50% 50%;">
+              </div>
+          
             </div>
-        </div>
-    </div>
+          </div>
+          
+          <!-- Modal for Image Zoom -->
+          <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img id="modalImg" class="modal-content" alt="Zoomed Image">
+          </div>
+    </div>      
 
     <footer>
         <h3>Disclaimer</h3>
         <p>This page is an activity that used the SM page as reference and we need to make the page looks identical. All images and content are for educational purposes only. If you own any of the images and would like them removed, please contact me.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const images = document.querySelectorAll(".zoomable");
+          const modal = document.getElementById("imageModal");
+          const modalImg = document.getElementById("modalImg");
+          const closeBtn = document.querySelector(".close");
+          const nav = document.querySelector("nav");
+        
+          let scale = 1;
+        
+          // When clicking an image
+          images.forEach(image => {
+            image.addEventListener("click", function () {
+              modal.style.display = "flex";
+              modalImg.src = this.src;
+              scale = 1;
+              modalImg.style.transform = `scale(${scale})`;
+              nav.classList.add("hide-nav"); // Hide the navbar
+            });
+          });
+        
+          // Close modal when clicking close button
+          closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+            nav.classList.remove("hide-nav"); // Show the navbar again
+          });
+        
+          // Close modal when clicking outside the image
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              modal.style.display = "none";
+              nav.classList.remove("hide-nav"); // Show the navbar again
+            }
+          });
+        
+          // Zoom in/out on mouse wheel
+          modalImg.addEventListener("wheel", function (e) {
+            e.preventDefault();
+            if (e.deltaY < 0) {
+              scale += 0.1;
+            } else {
+              scale = Math.max(1, scale - 0.1);
+            }
+            modalImg.style.transform = `scale(${scale})`;
+          });
+        });
+        </script>
+        
+        
 </body>
 </html>
