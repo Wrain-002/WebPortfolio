@@ -278,18 +278,19 @@ nav ul li a:hover::after{
 .post-images{
     text-align: center;
 }
-.post-images p{
+#quiz p{
     padding-top: 20px;
     font-size: 20px;
     font-weight: 600;
     color: #AD974F;
+    text-align: center;
 }
-.post-images p a{
+#quiz p a{
     text-decoration: none;
     color: #AD974F;
     position: relative;
 }
-.post-images a::after{
+#quiz a::after{
     content: '';
     width: 0;
     height: 3px;
@@ -299,7 +300,7 @@ nav ul li a:hover::after{
     bottom: -6px;
     transition: .2s;
 }
-.post-images a:hover::after{
+#quiz a:hover::after{
     width: 100%;
 }
 #gallery {
