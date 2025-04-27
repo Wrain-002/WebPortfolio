@@ -568,7 +568,14 @@ footer {
     .desc p {
         font-size: 18px;
     }
-    
+    .test img, .pre-test img, .post_test img{
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 80%;
+    }
+    .quiz-container{
+        margin-top: 50px;
+    }
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -585,10 +592,13 @@ footer {
     .header-text h1 {
         font-size: 24px;
     }
+    
     .header-text p {
         font-size: 16px;
         width: 90%;
     }
+    
+    
     
 }
 @media (max-width: 300px) {
