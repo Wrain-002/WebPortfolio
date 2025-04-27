@@ -105,7 +105,7 @@ nav ul li a:hover::after{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .header-text h1{
     color: #AD974F;
@@ -331,7 +331,7 @@ nav ul li a:hover::after{
     width: auto;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-bottom: 10px;
@@ -346,17 +346,23 @@ nav ul li a:hover::after{
     border-radius: 20px;
     box-shadow: 0 0 15px black;
 }
-.test{
+
+.test, .pre-test, .post_test{
     width: 100%;
     height: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 25%;
+    gap: 20px;
+    padding-bottom: 5%;
 }
-.post_test{
-    width: 80%;
-    height: 180%;
-}
-.pre-test{
-    width: 80%;
-    height: 80%;
+.test img, .pre-test img, .post_test img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 40%;
 }
 .quiz-container{
     display: flex;
@@ -613,7 +619,7 @@ footer {
 
     .post-test button {
         font-size: 20px;
-        width: 35px;
+        width: 25px;
         padding: 5px;
     }
 
