@@ -585,7 +585,7 @@ footer {
     
     
     .header-text {
-        margin-top: 30px;
+        margin-top: 35px;
     }
     .header-text img {
         width: 20%;
@@ -641,7 +641,16 @@ footer {
         font-size: 16px;
         width: 90%;
     }
-    
+    #gallery {
+        width: 180px;
+        height: 180px;
+    }
+
+    .post-test button {
+        font-size: 15px;
+        width: 15px;
+        padding: 5px;
+    }
     
     
 }
@@ -667,6 +676,7 @@ footer {
         height: auto;
     }
 
+<<<<<<< HEAD
     #gallery {
         width: 180px;
         height: 180px;
@@ -677,6 +687,9 @@ footer {
         width: 20px;
         padding: 5px;
     }
+=======
+    
+>>>>>>> c162338d586aa28c5067c6e788f4e2bc15cfe6d8
 
     .modal img {
         max-height: 80vh;
@@ -695,5 +708,13 @@ footer {
     nav {
         padding-left: 15px;
     }
+<<<<<<< HEAD
+=======
+
+    nav .logo {
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+>>>>>>> c162338d586aa28c5067c6e788f4e2bc15cfe6d8
 }
 
