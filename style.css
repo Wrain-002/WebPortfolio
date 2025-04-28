@@ -629,16 +629,10 @@ footer {
         font-size: 40px;
         width: 25px;
         padding: 5px;
-        background: white;
     }
 }
 
 @media (max-width: 480px) {
-    #header,#about,#projects,#quiz,#contact,#services{
-        width: 100%;
-        height: auto;
-        padding-top: 10px;
-    }
     .header-text h1 {
         font-size: 24px;
     }
