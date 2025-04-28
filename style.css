@@ -585,7 +585,7 @@ footer {
     
     
     .header-text {
-        margin-top: 35px;
+        align-items: center;
     }
     .header-text img {
         width: 20%;
