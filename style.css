@@ -509,6 +509,9 @@ footer {
 }
 /* Responsive Styles */
 @media (max-width: 1024px) {
+    nav ul{
+        padding: 0;
+    }
     .container {
         padding: 10px 5%;
     }
@@ -558,7 +561,7 @@ footer {
         flex-direction: column;
         text-align: center;
         padding: 10px 0;
-        padding-bottom: 50%;
+        padding-bottom: 5%;
     }
     nav ul li {
         margin: 20px 0;
